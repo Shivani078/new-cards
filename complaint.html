@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flush it</title>
+    <style>
+        body{
+            background-color: #f4ecec;
+        }
+       .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            background-color: #ce9b9b;
+            
+        }
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 18px; /* Increased font size for labels */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px; 
+            border-color: black;
+        }
+        textarea {
+            height: 100px;
+        }
+        .btn {
+            background-color: #3456b1;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size for submit button */
+        }
+        .btn:hover:hover {
+            background-color: #1b248f;
+        }
+        p {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+            font-size: 20px; 
+            text-align: center; 
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .popup {
+         width: 400px;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute; 
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color : #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+}
+.open-Popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button{
+
+width: 100%;
+
+margin-top: 50px;
+
+padding: 10px 0;
+
+background: #6fd649;
+
+color: #fff;
+
+border: 0;
+outline: none;
+font-size: 18px;
+border-radius: 4px;
+cursor: pointer;
+border: #333;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <h2>Report a Problem</h2>
+    <p><strong> If you encounter any issues with the washroom facilities, please report them using the form below. We will escalate your complaint to the relevant authorities responsible for addressing the issue and strive to resolve it promptly.</strong></p>
+    
+    <div class="container">
+    
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="location">Location of Washroom:</label>
+        <input type="text" id="location" name="location" required>
+        <label for="datetime">Date and Time of Incident:</label>
+        <input type="datetime-local" id="datetime" name="datetime" required>
+        <label for="issue">Nature of Issue:</label>
+        <select id="issue" name="issue" required>
+            <option value="">Select...</option>
+            <option value="cleanliness">Cleanliness</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="accessibility">Accessibility</option>
+            <option value="safety issue">safety issue</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+         <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+
+        
+        <div class="popup" id="popup">
+            <img src="404-tick.png">
+            <h3>Submitted</h3>
+            <p>Your complaint has been submitted. We will send it to the required authority soon.</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </form>
+    
+</div>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-Popup");
+    }
+    function closePopup(){
+        popup.classList.remove("open-Popup");
+    }
+</script>
+
+
+</body>
+</html>
