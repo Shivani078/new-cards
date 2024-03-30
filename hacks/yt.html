@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>search in javascript</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container-fluid">
+<div class="container">
+<div class="search">
+<h1>Washrooms near you</h1>
+<input type="text" name="" id="find" placeholder="search here...." onkeyup="search()">
+</div>
+<div class="filterBox">
+  <h2>Restroom Requirements</h2>
+  <div class="categorylist">
+      <label for="available">
+          <input type="checkbox" id="available" class="filter-checkbox">Available (Open)
+      </label>
+      <label for="clean">
+          <input type="checkbox" id="clean" class="filter-checkbox">Clean
+      </label>
+      <label for="safe">
+          <input type="checkbox" id="safe" class="filter-checkbox">Safe Location
+      </label>
+      <label for="accessible">
+          <input type="checkbox" id="accessible" class="filter-checkbox">Wheelchair Accessible
+      </label>
+      <label for="amenities">
+          <input type="checkbox" id="amenities" class="filter-checkbox">Amenities Available
+      </label>
+      <label for="hygiene">
+          <input type="checkbox" id="hygiene" class="filter-checkbox">Hygiene Facilities
+      </label>
+      <label for="privacy">
+          <input type="checkbox" id="privacy" class="filter-checkbox">Privacy Assured
+      </label>
+      <label for="compliance">
+          <input type="checkbox" id="compliance" class="filter-checkbox">Regulatory Compliance
+      </label>
+      <label for="covid19">
+          <input type="checkbox" id="covid19" class="filter-checkbox">COVID-19 Safety Measures
+      </label>
+  </div>
+</div>
+
+<div class="product-list">
+  <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal1">
+        
+    <img src="images/25q02xb8.png">
+      <h3>SBM Toilet, Rajouri Garden New Delhi</h3>
+      <p><strong>Address:</strong> Sant Sujan Singh Marg, Main Market, Block J, Rajouri Garden, New Delhi, Delhi, 110027</p>
+      <p><strong>Reviews:</strong> 5.0</p>
+      <p><strong>Mon-Sun:</strong> Open 6:00 am - 10:00 pm</p>
+      <p><strong>Category:</strong> Public bathroom</p>
+      
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.432762738221!2d77.12121779999997!3d28.646758100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d036dbee55587%3A0x997951841d8e027!2z4KSP4KS44KSs4KWA4KSP4KSuIOCkn-ClieCkr-CksuClh-Cknw!5e0!3m2!1shi!2sin!4v1711724382656!5m2!1shi!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+    </div>
+  
+    <div class="product" data-available="false" data-clean="false" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="false" data-category="Public bathroom"  data-modal-target="#modal12">
+
+        <img src="images/Swachh public Toilet, Rajouri Garden.png">
+      <h3>Swachh public Toilet, Rajouri Garden</h3>
+      <p><strong>Address:</strong> J4XC+MWV, Shivaji Place, Vishal Enclave, Rajouri Garden, New Delhi, Delhi, 110027</p>
+      <p><strong>Reviews:</strong> 4.3</p>
+      <p><strong>Mon-Sun:</strong> Open 6:00 am - 10:00 pm</p>
+      <p><strong>Category:</strong> Public Bathroom</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.3498983009827!2d77.11971987528969!3d28.649240175655645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03727c9b4de7%3A0x7579a0e025a0aed7!2z4KS44KS-4KSw4KWN4KS14KSc4KSo4KS_4KSVIOCktuCljOCkmuCkvuCksuCkryDgpLjgpY3gpLXgpJrgpY3gpJs!5e0!3m2!1shi!2sin!4v1711731307259!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="true" data-clean="true" data-safe="false" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="false" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal13">
+        <img src="images/Swachh public toilet, Karol Bagh metro station south side.jpeg">
+      <h3>Swachh public toilet, Karol Bagh metro station south side</h3>
+      <p><strong>Address:</strong> J5VQ+G99, Block B, Karol Bagh, New Delhi, Delhi, 110060</p>
+      <p><strong>Reviews:</strong> 4.3</p>
+      <p><strong>Mon-Sun:</strong> 6:00 am - 11:00 pm</p>
+      <p><strong>Category:</strong> Public Toilet</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14006.127030993388!2d77.1797373697754!3d28.643792599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0298abc13edf%3A0xfb5babc0085dfe6b!2z4KS44KS-4KSw4KWN4KS14KSc4KSo4KS_4KSVIOCktuCljOCkmuCkvuCksuCkryDgpJXgpLDgpYvgpLIg4KSs4KS-4KSXIOCkruClh-Ckn-CljeCksOCliyDgpLjgpY3gpJ_gpYfgpLbgpKgg4KSV4KWHIOCkpuCkleCljeCkt-Ckv-CkoyDgpJXgpYAg4KST4KSwIOCkuOCljeCkteCkmuCljeCkmw!5e0!3m2!1shi!2sin!4v1711740047566!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+  
+    <div class="product" data-available="false" data-clean="true" data-safe="true" data-accessible="false" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="false" data-category="Public bathroom"  data-modal-target="#modal14">
+        <img src="images/Swacch Public Toilet, Pahar Ganj, Delhi.jpeg">
+      <h3>Swacch Public Toilet, Pahar Ganj, Delhi</h3>
+      <p><strong>Address:</strong> R.K, Bharat Nagar, Ashram Road, Pahar Ganj, Delhi - 110055</p>
+      <p><strong>Reviews:</strong> 4.3</p>
+      <p><strong>Opens at:</strong> 06:00 AM - 10:00 pm</p>
+      <p><strong>Category:</strong> Public Toilets</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56024.50812397355!2d77.1797373697754!3d28.643792599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd41b3bf8aff%3A0x68bd73c666ffd2da!2sPublic%20Bathroom%20-%20Paharganj!5e0!3m2!1shi!2sin!4v1711740088957!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="true" data-amenities="false" data-hygiene="false" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal15">
+        <img src="images/Swacch Public Toilet, Moti Nagar, Delhi.jpeg">
+      <h3>Swacch Public Toilet, Moti Nagar, Delhi</h3>
+      <p><strong>Address:</strong> Moti Nagar Metro Station, New, Mini Market, New, Moti Nagar, Delhi - 110015</p>
+      <p><strong>Reviews:</strong> 4.5</p>
+      <p><strong>Opens at:</strong> 06:00 AM</p>
+      <p><strong>Category:</strong> Public Toilets</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7002.0667051790715!2d77.1391626348877!3d28.658720000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03012571ca59%3A0x1e4a3e4d297500c0!2z4KS44KWN4KS14KSa4KWN4KSbIOCkquCkrOCljeCksuCkv-CklSDgpJ_gpYngpK_gpLLgpYfgpJ8!5e0!3m2!1shi!2sin!4v1711740936795!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal16">
+        <img src="images/Dwarka sector 10, Dwarka, Delhi.jpeg">
+      <h3>Dwarka sector 10, Dwarka, Delhi</h3>
+      <p><strong>SBM Toilet</strong></p>
+      <p><strong>Address:</strong> Dwarka sector 10, Dwarka, Delhi - 110075 (near Sriram school)</p>
+      <p><strong>Reviews:</strong> 4.2 ratings</p>
+      <p><strong>Mon-Sun:</strong> 6:00 am - 10:00 pm</p>
+      <p><strong>Category:</strong> Public Bathroom</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.48628592739!2d77.04875376977543!3d28.581124300000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b1e3ca9eb1f%3A0x60278d7a458c39ba!2sDwarka%20Sector-%2010!5e0!3m2!1shi!2sin!4v1711741053311!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="false" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal17">
+        <img src="images/Swachh Public Toilet,dwarka.jpeg">
+      <h3>Dwarka, Delhi</h3>
+      <p><strong>Swachh Public Toilet</strong></p>
+      <p><strong>Address:</strong> Metro station, Shahabad mohammadpur, Sector 21, Dwarka, New Delhi - 110075</p>
+      <p><strong>Reviews:</strong> 4.5 ratings</p>
+      <p><strong>Mon-Sun:</strong> 5:00 am - 11:00 pm</p>
+      <p><strong>Category:</strong> Public Bathroom</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.944744686625!2d77.05726346977539!3d28.59269049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b24919a2167%3A0xd07e7a78d227fa5b!2z4KSP4KS44KSs4KWA4KSP4KSuIOCkn-ClieCkr-CksuClh-Cknw!5e0!3m2!1shi!2sin!4v1711741093699!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="false" data-clean="true" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal18">
+        <img src="images/Uttam Nagar, Delhi,susu point.jpeg">
+      <h3>Uttam Nagar, Delhi</h3>
+      <p><strong>Susu Point</strong></p>
+      <p><strong>Address:</strong> 166a, Goverdhan Park, Block E, Param Puri, Dwarka Mod, Uttam Nagar, Delhi - 110059</p>
+      <p><strong>Reviews:</strong> 3.5 ratings</p>
+      <p><strong>Category:</strong> Public Bathroom</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.793960795138!2d77.05416996977536!3d28.6088207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04d351737027%3A0x46066947359775d2!2z4KSP4KS44KSs4KWA4KSP4KSuIOCkn-ClieCkr-CksuClh-Cknw!5e0!3m2!1shi!2sin!4v1711741147177!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public bathroom"  data-modal-target="#modal19">
+        <img src="images/Sulabh Shauchalaya.jpeg">
+      <h3>Sulabh Shauchalaya</h3>
+      <p><strong>Address:</strong> A15, 1st Floor, Block D East, Uttam Nagar, Delhi 110059</p>
+      <p><strong>Reviews:</strong> 4.4</p>
+      <p><strong>Category:</strong> Public Bathroom</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.645295759012!2d77.0563677697754!3d28.624926699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04db761a9725%3A0xe2940216fde268bd!2z4KS44KWB4KSy4KStIOCktuCljOCkmuCkvuCksuCkryAo4KSq4KSs4KWN4KSy4KS_4KSVIOCkn-ClieCkr-CksuClh-Cknyk!5e0!3m2!1shi!2sin!4v1711741191698!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+   <!---- <div class="product" data-available="true" data-clean="true" data-safe="true" data-accessible="true" data-amenities="true" data-hygiene="true" data-privacy="true" data-compliance="true" data-covid19="true" data-category="Public Toilet"  data-modal-target="#modal20">
+      <img src="images/rajiv chowk j6m9.png">
+      <h3>Rajiv Chowk Public Toilet</h3>
+      <p><strong>Address:</strong> J6M9+699, Rajiv Chowk, Connaught Place, New Delhi, Delhi 110001</p>
+      <p><strong>Reviews:</strong> 3.5</p>
+      <p><strong>Category:</strong> Public Toilet</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.867656611607!2d77.21726561744381!3d28.633728300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd379659ae59%3A0x4ff466250a5bf5f2!2z4KS44KWB4KSy4KStIOCktuCljOCkmuCkvuCksuCkrw!5e0!3m2!1shi!2sin!4v1711741239973!5m2!1shi!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>  -->
+
+    
+    
+    
+  
+</div>
+</div> 
+
+
+
+<!-- Modals for each washroom -->
+<div class="modal" id="modal1">
+  <div class="modal-header">
+    <div class="title">Reviews </div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Cleanliness was satisfactory, giving it a 4 out of 5.</p>
+    <p>A bit crowded, but staff managed well. </p>
+  </div>
+</div>
+<div class="modal" id="modal12">
+  <div class="modal-header">
+    <div class="title">Reviews</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>"The staff was incredibly patient and helpful. Had an amazing experience!"</p>
+     <p> "Ventilation and floor cleaning need improvement, but overall decent."</p>
+  </div>
+</div>
+<div class="modal" id="modal13">
+  <div class="modal-header">
+    <div class="title">Reviews  </div>
+    <p><strong>Add Your Review</strong></p>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Conveniently located and reasonably clean. </p>
+    <p>Not the best, but satisfactory cleanliness. Decent for a public restroom.</p>
+  </div>
+</div>
+<div class="modal" id="modal14">
+  <div class="modal-header">
+    <div class="title">Reviews</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Impressed by the efforts in keeping it clean. </p>
+    <p>facilities were adequately clean.</p>
+  </div>
+</div>
+<div class="modal" id="modal15">
+  <div class="modal-header">
+    <div class="title">Reviews</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Decent facilities, but could use more attention to hygiene</p>
+     <p>Cleanliness could be improved, but service was commendable.</p>
+  </div>
+</div>
+<div class="modal" id="modal16">
+  <div class="modal-header">
+    <div class="title">Reviews & Map</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Prompt service and decent hygiene standards.</p>
+  </div>
+</div>
+<div class="modal" id="modal17">
+  <div class="modal-header">
+    <div class="title">Washroom Details 1</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <p><strong>Review by others</strong></p>
+  <div class="modal-body">
+    <p><strong>Add Your Review</strong></p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Honestly, I was pleasantly surprised by how clean this washroom was. It's rare to find such well-kept public facilities</p>
+  </div>
+</div>
+<div class="modal" id="modal18">
+  <div class="modal-header">
+    <div class="title">Washroom Details 1</div>
+    <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+    <div class="rating">
+      <p><strong>Add Your Review</strong></p>
+      <p><strong>Add Your Review</strong></p>
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+    <p><strong>Review by others</strong></p>
+    <p>Really! Clean Washrooms.</p>
+    <p>Good</p>
+  </div>
+</div>
+<!--------->
+
+<div id="overlay"></div>
+
+
+
+
+
+<!-- javascript -------------
+<script type="text/javascript">
+    function search() {
+      let filter = document.getElementById('find').value.toUpperCase();
+      let items = document.querySelectorAll('.product');
+      items.forEach(function(item) {
+        let h3 = item.querySelector('h3');
+        let value = h3.innerHTML.toUpperCase() || h3.innerText.toUpperCase() || h3.textContent.toUpperCase();
+        if (value.indexOf(filter) > -1) {
+          item.style.display = "";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+    </script>
+    <script>
+      // Function to filter washroom results based on checkbox filters
+      function filterWashrooms() {
+          
+          const washroomCards = document.querySelectorAll('.product');
+  
+         
+          const availableChecked = document.getElementById('available').checked;
+          const cleanChecked = document.getElementById('clean').checked;
+          const safeChecked = document.getElementById('safe').checked;
+          const accessibleChecked = document.getElementById('accessible').checked;
+          const amenitiesChecked = document.getElementById('amenities').checked;
+          const hygieneChecked = document.getElementById('hygiene').checked;
+          const privacyChecked = document.getElementById('privacy').checked;
+          const complianceChecked = document.getElementById('compliance').checked;
+          const covid19Checked = document.getElementById('covid19').checked;
+  
+          washroomCards.forEach(card => {
+              const isAvailable = card.getAttribute('data-available') === 'true';
+              const isClean = card.getAttribute('data-clean') === 'true';
+              const isSafe = card.getAttribute('data-safe') === 'true';
+              const isAccessible = card.getAttribute('data-accessible') === 'true';
+              const hasAmenities = card.getAttribute('data-amenities') === 'true';
+              const hasHygieneFacilities = card.getAttribute('data-hygiene') === 'true';
+              const hasPrivacy = card.getAttribute('data-privacy') === 'true';
+              const isCompliant = card.getAttribute('data-compliance') === 'true';
+              const hasCovid19Measures = card.getAttribute('data-covid19') === 'true';
+  
+              
+              const shouldDisplay = (!availableChecked || isAvailable) &&
+                  (!cleanChecked || isClean) &&
+                  (!safeChecked || isSafe) &&
+                  (!accessibleChecked || isAccessible) &&
+                  (!amenitiesChecked || hasAmenities) &&
+                  (!hygieneChecked || hasHygieneFacilities) &&
+                  (!privacyChecked || hasPrivacy) &&
+                  (!complianceChecked || isCompliant) &&
+                  (!covid19Checked || hasCovid19Measures);
+  
+             
+              if (shouldDisplay) {
+                  card.style.display = 'block';
+              } else {
+                  card.style.display = 'none';
+              }
+          });
+      }
+      const checkboxes = document.querySelectorAll('.filter-checkbox');
+      checkboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', filterWashrooms);
+      });
+  </script>
+----->
+
+
+
+<script src="script.js"></script>
+ 
+  
+</body>
+</html>
